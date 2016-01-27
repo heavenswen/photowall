@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>原生js照片墙</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	</head>
+	<style>
+		*{padding: 0; margin: 0;}
+		ul{ list-style: none;}
+		.photo_wall{ width: 100%; position: relative; border: 1px solid #FF3300; margin-bottom: 10px;}
+		.wall_cell{ position: absolute;left: 0;top:0; -webkit-transition:all .3s linear;}	
+		.wall_cell img{ display: block; width: 100%;}
+	</style>
+	<body>
+		<ul  class="photo_wall" id="wall">
+			<li class="wall_cell "><img src="images/me.jpg"/></li>
+			<li class="wall_cell " id="photo"><img src="images/icon6.png"/></li>
+			<li class="wall_cell"><img src="images/icon.png"/></li>
+			<li class="wall_cell"><img src="images/icon7.png"/></li>
+			<li class="wall_cell"><img src="images/icon3.png"/></li>
+			<li class="wall_cell"><img src="images/icon4.png"/></li>
+			<li class="wall_cell"><img src="images/icon5.png"/></li>
+			<li class="wall_cell "><img src="images/me.jpg"/></li>
+			<li class="wall_cell"><img src="images/icon3.png"/></li>
+			<li class="wall_cell"><img src="images/icon4.png"/></li>
+			<li class="wall_cell"><img src="images/icon5.png"/></li>
+			<li class="wall_cell"><img src="images/icon3.png"/></li>
+			<li class="wall_cell"><img src="images/icon4.png"/></li>
+			<li class="wall_cell"><img src="images/icon4.png"/></li>
+			<li class="wall_cell"><img src="images/icon4.png"/></li>
+			<li class="wall_cell"><img src="images/icon4.png"/></li>
+			<li class="wall_cell"><img src="images/icon7.png"/></li>
+			<li class="wall_cell"><img src="images/icon3.png"/></li>
+			<li class="wall_cell"><img src="images/icon4.png"/></li>
+			<li class="wall_cell"><img src="../images/dice_02.png" /></li>
+			<li class="wall_cell"><img src="../images/img04.jpg" /></li>
+			<li class="wall_cell"><img src="../guaguaka/girl2.jpg"/></li>
+		</ul>
+		<ul class="">
+			
+		</ul>
+		<script type="text/javascript" src="q.photowall.min.js" ></script>
+		<script>
+			window.onload = function(){var wall = new photo_wall({"obj":"wall","age":8,"cell":"wall_cell","init":"photo"});}
+			
+			//"obj":父容器id,"cell":图片容器class，"photo":标准图id，"age":行个数			
+			//支持跟随窗口大小，默认获得“obj”的宽
+			//注意图片加载完在进行定位，以免位置错误
+			//注意当位置上空格为1格时，图片会补齐，所以会出现大图片遮挡的情况
+			//注意图片的高必须和标准图的高成成正比，不然会被其他图片遮挡住或出现边距。
+		</script>
+	</body>
+</html>
